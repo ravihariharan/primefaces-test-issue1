@@ -15,8 +15,7 @@
 	<h1>#{testViewCdi.testString}</h1>
 	<br />
 	<br />
-	<p:selectOneMenu id="console" value="#{testView.console}"
-		style="width:125px">
+	<p:selectOneMenu id="console" value="#{testView.console}">
 		<f:selectItem itemLabel="Select One" itemValue="" />
 		<f:selectItem itemLabel="51234567890" itemValue="51234567890" />
 		<f:selectItem itemLabel="51234567890123456"
@@ -26,8 +25,7 @@
 	</p:selectOneMenu>
 	<br />
 	<br />
-	<p:selectOneMenu id="console1" value="#{testViewCdi.console}"
-		style="width:125px">
+	<p:selectOneMenu id="console1" value="#{testViewCdi.console}">
 		<f:selectItem itemLabel="Select One" itemValue="" />
 		<f:selectItem itemLabel="51234567890" itemValue="51234567890" />
 		<f:selectItem itemLabel="51234567890123456"
@@ -38,17 +36,16 @@
 	<br />
 	<br />
 
-	<p:selectOneMenu id="console3" value="#{testView.console2}"
-		style="width:125px">
+	<p:selectOneMenu id="console3" value="#{testView.console2}">
 		<f:selectItem itemLabel="Select One" itemValue="" />
 		<f:selectItems value="#{testView.cars}" />
 	</p:selectOneMenu>
 	<br />
 	<br />
-	<p:selectOneMenu id="console4" value="#{testViewCdi.console2}"
-		style="width:125px">
+	<p:selectOneMenu id="console4" value="#{testViewCdi.console2}">
 		<f:selectItem itemLabel="Select One" itemValue="" />
-		<f:selectItems value="#{testViewCdi.cars}" />
+		<f:selectItems value="#{testViewCdi.cars}" var="def"
+			itemLabel="#{def.value}" itemValue="#{def.label}" />
 	</p:selectOneMenu>
 	<br />
 </h:body>
