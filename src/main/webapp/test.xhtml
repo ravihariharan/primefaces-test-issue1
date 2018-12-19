@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>PrimeFaces Test</title>
+</h:head>
+<h:body>
+
+	<h1>#{testView.testString}</h1>
+
+	<h1>#{testViewCdi.testString}</h1>
+	<br />
+	<br />
+	<p:selectOneMenu id="console" value="#{testView.console}"
+		style="width:125px">
+		<f:selectItem itemLabel="Select One" itemValue="" />
+		<f:selectItem itemLabel="51234567890" itemValue="51234567890" />
+		<f:selectItem itemLabel="51234567890123456"
+			itemValue="51234567890123456" />
+		<f:selectItem itemLabel="512345678901234567890"
+			itemValue="512345678901234567890" />
+	</p:selectOneMenu>
+	<br />
+	<br />
+	<p:selectOneMenu id="console1" value="#{testViewCdi.console}"
+		style="width:125px">
+		<f:selectItem itemLabel="Select One" itemValue="" />
+		<f:selectItem itemLabel="51234567890" itemValue="51234567890" />
+		<f:selectItem itemLabel="51234567890123456"
+			itemValue="51234567890123456" />
+		<f:selectItem itemLabel="512345678901234567890"
+			itemValue="512345678901234567890" />
+	</p:selectOneMenu>
+	<br />
+	<br />
+
+	<p:selectOneMenu id="console3" value="#{testView.console2}"
+		style="width:125px">
+		<f:selectItem itemLabel="Select One" itemValue="" />
+		<f:selectItems value="#{testView.cars}" />
+	</p:selectOneMenu>
+	<br />
+	<br />
+	<p:selectOneMenu id="console4" value="#{testViewCdi.console2}"
+		style="width:125px">
+		<f:selectItem itemLabel="Select One" itemValue="" />
+		<f:selectItems value="#{testViewCdi.cars}" />
+	</p:selectOneMenu>
+	<br />
+</h:body>
+</html>
