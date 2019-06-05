@@ -3,4 +3,17 @@
               xmlns="http://xmlns.jcp.org/xml/ns/javaee"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+ 	<application>
+        <el-resolver>
+	        org.primefaces.test.IndexedValueCollectionELResolver
+        </el-resolver>
+    </application>
+    
+    <render-kit>
+		<renderer>
+            <component-family>org.primefaces.component</component-family>
+            <renderer-type>org.primefaces.component.SelectManyMenuRenderer</renderer-type>
+            <renderer-class>org.primefaces.test.LeanSelectManyRenderer</renderer-class>
+        </renderer>
+	</render-kit>
 </faces-config>
